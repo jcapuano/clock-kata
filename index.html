@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Digital Clock</title>						
+		<meta charset="utf8">		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">		
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<!-- Optional theme --> 
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<!-- Latest compiled and minified JavaScript
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		-->
+	</head>
+	
+	<body data-ng-app="clockApp">
+		<div data-ng-controller="clockController"> 
+			<div>			
+				<input type="checkbox" data-ng-model="format24">Show 24 hour</input>
+			</div>		
+			<div>
+				{{displaytime}} 
+			</div>
+			
+			<div>			
+				<input type="checkbox" data-ng-model="setAlarm">Set Alarm</input>
+				<input type="time" data-ng-model="alarmTime">Time</input>
+			</div>		
+			
+		</div>		
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>				
+		<script type="text/javascript" src="/app.js"></script>		
+	</body>	
+</html>
